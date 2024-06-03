@@ -32,7 +32,7 @@ class AuthProvider with ChangeNotifier {
       String email, String pass, String urlSegemnet) async {
     try {
       final url = Uri.parse(
-          'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegemnet?key=AIzaSyC6Slr11DceEFZLUGLFN-eDPqO2PTi4_H4');
+          'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegemnet?APi_key');
       final response = await http.post(url,
           body: json.encode(
               {'email': email, 'password': pass, 'returnSecureToken': true}));
